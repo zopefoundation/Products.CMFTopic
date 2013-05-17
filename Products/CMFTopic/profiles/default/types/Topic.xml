@@ -11,7 +11,7 @@
  <property name="factory">cmf.topic</property>
  <property name="add_view_expr">string:${folder_url}/++add++Topic</property>
  <property name="link_target"></property>
- <property name="immediate_view">properties.html</property>
+ <property name="immediate_view">properties</property>
  <property name="global_allow">True</property>
  <property name="filter_content_types">True</property>
  <property name="allowed_content_types">
@@ -19,7 +19,10 @@
  </property>
  <property name="allow_discussion">False</property>
  <alias from="(Default)" to="@@view.html"/>
+ <alias from="criteria" to="@@criteria.html"/>
+ <alias from="folder_contents" to="@@edit.html"/>
  <alias from="index.html" to="@@view.html"/>
+ <alias from="properties" to="@@properties.html"/>
  <alias from="view" to="@@view.html"/>
  <action title="View" action_id="view" category="object" condition_expr=""
     icon_expr="string:${portal_url}/preview_icon.png" link_target=""
@@ -28,18 +31,18 @@
  </action>
  <action title="Edit" action_id="edit" category="object" condition_expr=""
     icon_expr="string:${portal_url}/edit_icon.png" link_target=""
-    url_expr="string:${object_url}/properties.html" visible="True">
+    url_expr="string:${object_url}/properties" visible="True">
   <permission value="Change portal topics"/>
  </action>
  <action title="Criteria" action_id="criteria" category="object"
     condition_expr="" icon_expr="string:${portal_url}/criteria_icon.png"
-    link_target="" url_expr="string:${object_url}/criteria.html"
-    visible="True">
+    link_target="" url_expr="string:${object_url}/criteria" visible="True">
   <permission value="Change portal topics"/>
  </action>
  <action title="Subtopics" action_id="folderContents" category="object"
     condition_expr="" icon_expr="string:${portal_url}/folder_icon.png"
-    link_target="" url_expr="string:${object_url}/edit.html" visible="True">
+    link_target="" url_expr="string:${object_url}/folder_contents"
+    visible="True">
   <permission value="List folder contents"/>
  </action>
  <action title="New..." action_id="new" category="object" condition_expr=""
