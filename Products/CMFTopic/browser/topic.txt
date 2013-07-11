@@ -25,12 +25,12 @@ Add a Topic.
 
 Use the criteria form.
 
-    >>> browser.open('http://localhost/site/myTopic/@@criteria.html')
+    >>> browser.open('http://localhost/site/myTopic/@@criteria')
     >>> 'Topic Criteria: myTopic' in browser.contents
     True
 
 Use the view.
 
-    >>> browser.open('http://localhost/site/myTopic/@@view.html')
+    >>> browser.open('http://localhost/site/myTopic/@@view')
     >>> '[[cmf_default][Topic Matches:]]' in browser.contents
     True

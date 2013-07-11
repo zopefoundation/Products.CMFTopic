@@ -5,7 +5,7 @@
   <browser:page
       for="Products.CMFTopic.interfaces.ITopic"
       layer="Products.CMFDefault.interfaces.ICMFDefaultSkin"
-      name="view.html"
+      name="view"
       class=".topic.TopicView"
       template="topic.pt"
       permission="zope2.View"
@@ -14,7 +14,7 @@
   <browser:page
       for="Products.CMFTopic.interfaces.IMutableTopic"
       layer="Products.CMFDefault.interfaces.ICMFDefaultSkin"
-      name="criteria.html"
+      name="criteria"
       class=".topic.TopicCriteriaView"
       template="topic_criteria.pt"
       permission="cmf.ChangePortalTopics"
